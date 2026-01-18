@@ -1,21 +1,24 @@
 #include <ctype.h>
 #include <stdio.h>
 int main() {
-
+        // Maximum 150 characters (149) and the counters of vowels, consonants, digits and spaces.
   char line[150];
   int vowels, consonant, digit, space;
 
-  // initialize all variables to 0
+        // initialize all variables to 0
   vowels = consonant = digit = space = 0;
 
-  // get full line of string input
+        // get full line of string input
+        // fgets reads a whole line of text incl. spaces 
+        // line was set to char [150] so sizeof(line) sets the limit to that size.
+        // stdin means "standard input"
   printf("Enter a line of string: ");
-  fgets(line, sizeof(line), stdin);
+  fgets(line, sizeof(line), stdin); 
 
-  // loop through each character of the string
+        // loop through each character of the string until it hits the end '\0'
   for (int i = 0; line[i] != '\0'; ++i) {
 
-    // convert character to lowercase
+            // convert character to lowercase - to make A and a ans so one be treated the same.
     line[i] = tolower(line[i]);
 
     // check if the character is a vowel

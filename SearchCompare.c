@@ -80,46 +80,48 @@ int main(void){
   return 0;
 }
 // i is to be understood as the position. - array[4] means that i reads the fourth position. (0 is also a position!)
-int LinSearch(int array[], int x)
-{
-int i = 0;
-while (i < N && x != array[i])
-{
-  i = i + 1;
-}
-  if (i < N)
-{
+int LinSearch(int array[], int x){
+  int i = 0;
+
+  while (i < N && x != array[i]){
+    i = i + 1;
+  }
+
+  if (i < N){
     return i;
-}
-  else
-{
+  }
+
+  else{
     return -1;
-}
-}
-
-int BinSearch(int array[], int x)
-{
-  int i=0;
-  int j=N-1;
-
-while (i < j) 
-{
-int m = (i+j)/2; //unødvendigt med floor, da C automatisk afrunder nedad ved heltalsdivision
-
-if (x > array[m]) {
-  i=m+1;
-
-} else {
-  j = m;
   }
 }
 
-if (x == array[i]) {
-  return i;
 
-} else {
-  return -1;
-}
+// i = low
+// j = high
+// m = mid
+int BinSearch(int array[], int x){
+  int i=0;
+  int j=N-1;
+
+  while (i < j){
+    int m = (i+j)/2; //unødvendigt med floor, da C automatisk afrunder nedad ved heltalsdivision
+
+    if (x > array[m]){
+      i=m+1;
+    } 
+
+    else{
+      j = m;
+    }
+  }
+
+  if (x == array[i]){
+    return i;
+  } 
+  else{
+    return -1;
+  }
 }
 
 
