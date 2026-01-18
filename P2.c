@@ -1,8 +1,18 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include <string.h>
+int verdi;
+
+// fat lige det her senere.
+void minsejefunktion(){
+  verdi = +1;
+  printf("%d\n", verdi);
+  
+}
+
 
 int main (){
+minsejefunktion();
 printf("\n");
 int Number = 333;
 int Number2 = 666;
@@ -91,10 +101,10 @@ printf("Marius defineres som %c og hans tal er %d\n\n", Letter, Number);
     }
     dice = dice + 1;
   }
-// Expression 1 is executed (one time) before the execution of the code block.
-// Expression 2 defines the condition for executing the code block.
-// Expression 3 is executed (every time) after the code block has been executed.
-// for (expression 1; expression 2; expression 3)
+/*Expression 1 is executed (one time) before the execution of the code block.
+  Expression 2 defines the condition for executing the code block.
+  Expression 3 is executed (every time) after the code block has been executed.
+  for (expression 1; expression 2; expression 3)*/
 int number = 2;
 int i;
   //    1      2      3

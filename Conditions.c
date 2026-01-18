@@ -61,7 +61,6 @@ int main(void){
   p = isPrime(x);
   q = isGcd1(x);
   r = is2mod5(x);
-printf("p is %d, q is %d, and r is %d\n", p,q,r);
   if ((p && !r) || !(p || !q || r) || (!p && !q && r)){
     printf("You have found a valid x\n");
     printf("p is %d, q is %d, and r is %d\n", p,q,r);
