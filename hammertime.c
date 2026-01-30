@@ -3,9 +3,8 @@
 
 int main(void){
 int time_exists = 1;
-int Test;
-int Test2;
-
+int Makeitwork;
+  
 if (time_exists)
 {
 printf("Hammer time!\n");
