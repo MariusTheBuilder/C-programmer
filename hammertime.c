@@ -2,8 +2,8 @@
 #include <stdbool.h>
 
 int main(void){
-int time_exists;
-int test;
+int time_exists = 1;
+
 
 if (time_exists)
 {
